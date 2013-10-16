@@ -14,7 +14,7 @@ module.exports = _BloomFilter;
 function _BloomFilter(conf){
 
     if(conf === undefined){
-        conf = require('./bfConfig');
+        conf = require('./bloomfilterConfig');
     }
 
     var m = conf.m;
