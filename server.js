@@ -9,7 +9,7 @@
 var http = require('http');
 
 var conf = require('./conf/serverConf');
-var bloomfilter = new require('./bloomfilter/bloomfilter')();
+var bloomfilter = new (require('./bloomfilter/bloomfilter'))();
 var requestHandler = new (require('./lib/requestHandler'))(bloomfilter);
 var updateHandler = new (require('./lib/updateHandler'))(bloomfilter, conf.db);
 
