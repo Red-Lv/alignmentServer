@@ -6,7 +6,6 @@
  * To change this template use File | Settings | File Templates.
  */
 
-module.exports = conf;
 var conf = {
     bloomfilter: {
         m: 8 * 1024 * 1024 * 20,
@@ -20,3 +19,5 @@ var conf = {
         database: 'novels_new'
     }
 };
+
+module.exports = conf;
