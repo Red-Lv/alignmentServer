@@ -8,5 +8,6 @@
 
 module.exports = {
     m: 8 * 1024 * 1024 * 512,
-    n: 100000000
+    n: 100000000,
+    backupFile: './data/bloomfilterBackup.txt'
 };
