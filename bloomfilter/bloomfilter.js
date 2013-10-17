@@ -21,16 +21,20 @@ function _BloomFilter(conf){
     this.m = conf.m;
     this.n = conf.n;
     this.k = Math.ceil( Math.log(2) * m / n);
+    /*
     this.backFile = conf.backupFile;
     this.bucketsBackup = new Array();
 
     this.recover();
 
     if(this.bucketsBackup.length == 0){
-        BloomFilter.call(this, m, k);
+        BloomFilter.call(this, this.m, this.k);
     }else{
         BloomFilter.call(this, this.bucketsBackup, k);
     }
+    */
+
+    BloomFilter.call(this, this.m, this.k);
 
 }
 
