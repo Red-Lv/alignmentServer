@@ -13,10 +13,10 @@ var conf = {
     },
     db: [
         {
-            host: '10.46.7.171',
-            port: 4198,
-            user: 'wise_novelclu_w',
-            password: 'C9l3U4n6M2e1',
+            host: '10.50.42.76',
+            port: 5195,
+            user: 'novelclu_rd',
+            password: 'j8r5e2Ik51de74',
             database: 'novels_new'
         }
     ]
