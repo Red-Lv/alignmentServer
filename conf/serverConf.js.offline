@@ -17,7 +17,8 @@ var conf = {
             port: 5195,
             user: 'novelclu_rd',
             password: 'j8r5e2Ik51de74',
-            database: 'novels_new'
+            database: 'novels_new',
+            supportBigNumbers: true
         }
     ]
 };

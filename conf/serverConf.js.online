@@ -17,7 +17,8 @@ var conf = {
             port: 4198,
             user: 'wise_novelclu_w',
             password: 'C9l3U4n6M2e1',
-            database: 'novels_new'
+            database: 'novels_new',
+            supportBigNumbers: true
         }
     ]
 };
