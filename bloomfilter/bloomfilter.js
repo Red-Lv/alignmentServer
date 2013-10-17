@@ -20,7 +20,7 @@ function _BloomFilter(conf){
 
     this.m = conf.m;
     this.n = conf.n;
-    this.k = Math.ceil( Math.log(2) * m / n);
+    this.k = Math.ceil( Math.log(2) * this.m / this.n);
     /*
     this.backFile = conf.backupFile;
     this.bucketsBackup = new Array();
