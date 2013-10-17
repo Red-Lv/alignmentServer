@@ -38,23 +38,13 @@ util.inherits(_BloomFilter, BloomFilter);
 
 _BloomFilter.prototype.recover = function (){
 
-    fs.readFile(this.backFile, function(err, data){
+    var content = fs.readFileSync(this.backFile, {encoding: 'utf8'});
 
-        if(err){
-           throw err;
-        }
+    var obj = content ? JSON.parse(content) : {};
 
-        var obj = JSON.parse(data.toString())
-
-        if(obj){
-
-            if(obj.m === this.m){
-                this.bucketsBackup = obj.buckets;
-            }
-
-        }
-
-    });
+    if(obj.m === this.m){
+        this.bucketsBackup = obj.buckets;
+    }
 
 };
 
