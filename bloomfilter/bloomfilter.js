@@ -54,14 +54,18 @@ _BloomFilter.prototype.recover = function (){
 
         }
 
-    })
+    });
 
 };
 
 _BloomFilter.prototype.backup = function (){
 
-    fs.writeFile(this.backFile, JSON.stringify({m: this.m, buckets: this.buckets}), function(err){
-        util.log(util.format('[backup] m: %d, buckets: %d', this.m, this.buckets.length))
+    self = this;
+    fs.writeFile(self.backFile, JSON.stringify({m: self.m, buckets: self.buckets}), function(err){
+
+        util.log(util.format('[backup] m: %d, buckets: %d', self.m, self.buckets.length));
+
+        setTimeout(self.backup.bind(self), 3600 * 24);
     })
 
 };
