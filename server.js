@@ -14,7 +14,7 @@ var requestHandler = new (require('./lib/requestHandler'))(bloomfilter);
 var updateHandler = new (require('./lib/updateHandler'))(bloomfilter, conf.db);
 
 bloomfilter.backup();
-updateHandler.start();
+updateHandler.update();
 
 http.createServer(function (req, res){
 
