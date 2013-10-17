@@ -13,7 +13,7 @@ var bloomfilter = new (require('./bloomfilter/bloomfilter'))();
 var requestHandler = new (require('./lib/requestHandler'))(bloomfilter);
 var updateHandler = new (require('./lib/updateHandler'))(bloomfilter, conf.db);
 
-bloomfilter.backup();
+//bloomfilter.backup();
 updateHandler.update();
 
 http.createServer(function (req, res){
